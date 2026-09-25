@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ataques en Redes de Computadoras</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tipos de Ataques en Redes de Computadoras</h1>
+            <p>Una guía completa sobre las amenazas en internet y cómo prevenirlas</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>¿Qué es un ataque en red?</h2>
+            <p>Los ataques en redes de computadoras (ciberataques) son acciones deliberadas que buscan acceder, alterar, destruir o interrumpir sistemas, redes o datos. Con la creciente dependencia de internet, comprender estas amenazas es fundamental para proteger nuestra información.</p>
+        </section>
+
+        <section class="attacks-grid">
+            <!-- Malware -->
+            <article class="attack-card">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Malware y código binario">
+                <h3>1. Malware (Software Malicioso)</h3>
+                <p><strong>Definición:</strong> Software diseñado específicamente para dañar o infiltrarse en un sistema sin el conocimiento del usuario.</p>
+                <p><strong>Características:</strong> Puede autorreplicarse (gusanos), espiar actividades (spyware) o dañar archivos importantes del sistema operativo.</p>
+                <p><strong>Clasificación:</strong> Virus, Gusanos, Troyanos, Spyware.</p>
+                <p><strong>Prevención:</strong> Uso de antivirus actualizados, evitar descargar archivos de fuentes desconocidas y mantener el sistema operativo actualizado.</p>
+            </article>
+
+            <!-- Ransomware -->
+            <article class="attack-card">
+                <img src="https://images.unsplash.com/photo-1614064641913-a53b51c89527?auto=format&fit=crop&w=800&q=80" alt="Candado y seguridad digital">
+                <h3>2. Ransomware</h3>
+                <p><strong>Definición:</strong> Un tipo de malware que cifra los archivos de la víctima, bloqueando el acceso a sus propios datos.</p>
+                <p><strong>Características:</strong> Los atacantes exigen un pago (rescate), generalmente en criptomonedas, para proporcionar la clave de descifrado y liberar la información.</p>
+                <p><strong>Clasificación:</strong> Malware de secuestro de datos (Locker y Crypto-ransomware).</p>
+                <p><strong>Prevención:</strong> Realizar copias de seguridad (backups) periódicas y aisladas, no abrir correos sospechosos y usar software de seguridad EDR.</p>
+            </article>
+
+            <!-- Phishing -->
+            <article class="attack-card">
+                <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=800&q=80" alt="Phishing y robo de identidad">
+                <h3>3. Phishing (Suplantación de Identidad)</h3>
+                <p><strong>Definición:</strong> Técnica de ingeniería social que utiliza comunicaciones fraudulentas (correos, mensajes) que parecen legítimas para engañar a los usuarios.</p>
+                <p><strong>Características:</strong> Busca manipular psicológicamente al usuario para que revele credenciales bancarias, contraseñas o instale malware voluntariamente.</p>
+                <p><strong>Clasificación:</strong> Ingeniería social (Spear Phishing, Whaling, Vishing).</p>
+                <p><strong>Prevención:</strong> Capacitación para reconocer correos falsos, verificar las URLs de los sitios web y usar Autenticación Multifactor (MFA).</p>
+            </article>
+
+            <!-- DDoS -->
+            <article class="attack-card">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Servidores y redes saturadas">
+                <h3>4. Denegación de Servicio (DDoS)</h3>
+                <p><strong>Definición:</strong> Saturar un servidor, servicio o red con un tráfico excesivo para agotar sus recursos y dejarlo inoperativo para los usuarios legítimos.</p>
+                <p><strong>Características:</strong> El ataque Distribuido (DDoS) utiliza una red de múltiples computadoras comprometidas (botnets) para realizar el ataque simultáneamente desde diferentes orígenes.</p>
+                <p><strong>Clasificación:</strong> Ataques volumétricos, de protocolo o de capa de aplicación.</p>
+                <p><strong>Prevención:</strong> Implementar firewalls, monitoreo de tráfico en tiempo real, balanceadores de carga y servicios de mitigación DDoS en la nube.</p>
+            </article>
+
+            <!-- Man in the middle -->
+            <article class="attack-card">
+                <img src="https://images.unsplash.com/photo-1510511459019-5d0197022822?auto=format&fit=crop&w=800&q=80" alt="Hacker interceptando datos">
+                <h3>5. Man-in-the-Middle (MitM)</h3>
+                <p><strong>Definición:</strong> El atacante se sitúa en medio de la comunicación entre dos partes y la intercepta, sin que ninguna de las partes se dé cuenta.</p>
+                <p><strong>Características:</strong> Permite al atacante escuchar, capturar contraseñas o incluso alterar la información transmitida en tiempo real.</p>
+                <p><strong>Clasificación:</strong> Intercepción de red, Spoofing (ARP, DNS, IP).</p>
+                <p><strong>Prevención:</strong> Utilizar cifrado en las comunicaciones (HTTPS, VPNs), evitar el uso de redes Wi-Fi públicas y abiertas para transacciones sensibles.</p>
+            </article>
+
+            <!-- SQL Injection -->
+            <article class="attack-card">
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80" alt="Código de programación">
+                <h3>6. Inyección SQL</h3>
+                <p><strong>Definición:</strong> Inserción de código malicioso en los campos de entrada de un sitio web para manipular las consultas que se hacen a su base de datos.</p>
+                <p><strong>Características:</strong> Aprovecha vulnerabilidades en formularios web para saltarse la autenticación, extraer datos confidenciales o corromper/borrar la base de datos.</p>
+                <p><strong>Clasificación:</strong> Ataques a aplicaciones web, inyección de código.</p>
+                <p><strong>Prevención:</strong> Sanitizar y validar las entradas de los usuarios, utilizar consultas parametrizadas o procedimientos almacenados en la programación del backend.</p>
+            </article>
+        </section>
+    </main>
+
+    <section class="references container">
+        <h2>Referencias Bibliográficas</h2>
+        <ul>
+            <li>Microsoft. (n.d.). <em>¿Qué son los ciberataques?</em> Recuperado de Microsoft Security.</li>
+            <li>IBM. (n.d.). <em>¿Qué es el malware?</em> Recuperado de IBM Cybersecurity.</li>
+            <li>Fortinet. (n.d.). <em>Ciberamenazas y Seguridad en Redes</em>. Recuperado de Fortinet Cybersecurity Guide.</li>
+            <li>SentinelOne. (n.d.). <em>Phishing: Definición, prevención y ejemplos</em>. Recuperado de SentinelOne Resources.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 - Investigación sobre Seguridad en Redes y Prevención de Ataques.</p>
+        </div>
+    </footer>
+</body>
+</html>
