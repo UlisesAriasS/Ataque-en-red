@@ -5,93 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ataques en Redes de Computadoras</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Tipos de Ataques en Redes de Computadoras</h1>
-            <p>Una guía completa sobre las amenazas en internet y cómo prevenirlas</p>
+    <div class="glow-background"></div>
+    <header id="navbar">
+        <div class="container nav-container">
+            <div class="logo">Cyber<span>Def</span></div>
+            <nav>
+                <a href="#intro">Inicio</a>
+                <a href="#ataques">Tipos de Ataques</a>
+                <a href="#referencias">Referencias</a>
+            </nav>
         </div>
     </header>
 
     <main class="container">
-        <section class="intro">
-            <h2>¿Qué es un ataque en red?</h2>
-            <p>Los ataques en redes de computadoras (ciberataques) son acciones deliberadas que buscan acceder, alterar, destruir o interrumpir sistemas, redes o datos. Con la creciente dependencia de internet, comprender estas amenazas es fundamental para proteger nuestra información.</p>
+        <section id="intro" class="hero fade-in">
+            <div class="hero-content">
+                <h1>El paisaje de las <br><span class="neon-text">Ciberamenazas</span></h1>
+                <p>Descubre los principales ataques en redes de computadoras, cómo operan los cibercriminales y las estrategias esenciales para proteger tu infraestructura digital.</p>
+                <a href="#ataques" class="btn-primary">Explorar Ataques</a>
+            </div>
         </section>
 
-        <section class="attacks-grid">
-            <!-- Malware -->
-            <article class="attack-card">
-                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Malware y código binario">
-                <h3>1. Malware (Software Malicioso)</h3>
-                <p><strong>Definición:</strong> Software diseñado específicamente para dañar o infiltrarse en un sistema sin el conocimiento del usuario.</p>
-                <p><strong>Características:</strong> Puede autorreplicarse (gusanos), espiar actividades (spyware) o dañar archivos importantes del sistema operativo.</p>
-                <p><strong>Clasificación:</strong> Virus, Gusanos, Troyanos, Spyware.</p>
-                <p><strong>Prevención:</strong> Uso de antivirus actualizados, evitar descargar archivos de fuentes desconocidas y mantener el sistema operativo actualizado.</p>
-            </article>
+        <section id="ataques" class="attacks-section">
+            <h2 class="section-title fade-in">Vectores de Ataque Principales</h2>
+            <div class="attacks-grid">
+                
+                <!-- Malware -->
+                <article class="attack-card fade-in delay-1">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Malware y código binario">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>1. Malware</h3>
+                        <p class="subtitle">Software Malicioso</p>
+                        <p><strong>Definición:</strong> Programas diseñados específicamente para dañar, infiltrarse o tomar control de un sistema de forma oculta.</p>
+                        <p><strong>Características:</strong> Alto poder de autorreplicación, capacidad para espiar actividades (spyware) o corromper el núcleo del sistema operativo.</p>
+                        <p><strong>Clasificación:</strong> Virus, Gusanos (Worms), Troyanos, Spyware, Adware.</p>
+                        <div class="prevention">
+                            <h4>🛡️ Prevención</h4>
+                            <p>Antivirus EDR (Endpoint Detection and Response), parcheo de software y control de aplicaciones.</p>
+                        </div>
+                    </div>
+                </article>
 
-            <!-- Ransomware -->
-            <article class="attack-card">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Candado y seguridad digital">
-                <h3>2. Ransomware</h3>
-                <p><strong>Definición:</strong> Un tipo de malware que cifra los archivos de la víctima, bloqueando el acceso a sus propios datos.</p>
-                <p><strong>Características:</strong> Los atacantes exigen un pago (rescate), generalmente en criptomonedas, para proporcionar la clave de descifrado y liberar la información.</p>
-                <p><strong>Clasificación:</strong> Malware de secuestro de datos (Locker y Crypto-ransomware).</p>
-                <p><strong>Prevención:</strong> Realizar copias de seguridad (backups) periódicas y aisladas, no abrir correos sospechosos y usar software de seguridad EDR.</p>
-            </article>
+                <!-- Ransomware -->
+                <article class="attack-card fade-in delay-2">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Candado y seguridad digital">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>2. Ransomware</h3>
+                        <p class="subtitle">Secuestro de Datos</p>
+                        <p><strong>Definición:</strong> Malware letal que emplea criptografía para cifrar los archivos de la víctima, pidiendo un rescate a cambio.</p>
+                        <p><strong>Características:</strong> Uso de algoritmos de cifrado de grado militar. A menudo paraliza operaciones de empresas enteras hasta que se paga en criptomonedas.</p>
+                        <p><strong>Clasificación:</strong> Crypto-ransomware (cifra archivos) y Locker-ransomware (bloquea la pantalla).</p>
+                        <div class="prevention">
+                            <h4>🛡️ Prevención</h4>
+                            <p>Estrategia de Backup 3-2-1 (copias aisladas/offline) y concienciación sobre phishing.</p>
+                        </div>
+                    </div>
+                </article>
 
-            <!-- Phishing -->
-            <article class="attack-card">
-                <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=800&q=80" alt="Phishing y robo de identidad">
-                <h3>3. Phishing (Suplantación de Identidad)</h3>
-                <p><strong>Definición:</strong> Técnica de ingeniería social que utiliza comunicaciones fraudulentas (correos, mensajes) que parecen legítimas para engañar a los usuarios.</p>
-                <p><strong>Características:</strong> Busca manipular psicológicamente al usuario para que revele credenciales bancarias, contraseñas o instale malware voluntariamente.</p>
-                <p><strong>Clasificación:</strong> Ingeniería social (Spear Phishing, Whaling, Vishing).</p>
-                <p><strong>Prevención:</strong> Capacitación para reconocer correos falsos, verificar las URLs de los sitios web y usar Autenticación Multifactor (MFA).</p>
-            </article>
+                <!-- Phishing -->
+                <article class="attack-card fade-in delay-3">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=800&q=80" alt="Phishing y robo de identidad">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>3. Phishing</h3>
+                        <p class="subtitle">Ingeniería Social</p>
+                        <p><strong>Definición:</strong> Suplantación de identidad donde el atacante finge ser una entidad de confianza (banco, empresa) para robar datos.</p>
+                        <p><strong>Características:</strong> Explota la psicología humana (urgencia o miedo) más que fallos técnicos. Usa correos electrónicos o SMS falsificados.</p>
+                        <p><strong>Clasificación:</strong> Spear Phishing (dirigido), Whaling (altos ejecutivos), Vishing (llamadas), Smishing (SMS).</p>
+                        <div class="prevention">
+                            <h4>🛡️ Prevención</h4>
+                            <p>Autenticación Multifactor (MFA), capacitación de usuarios y filtros antispam avanzados.</p>
+                        </div>
+                    </div>
+                </article>
 
-            <!-- DDoS -->
-            <article class="attack-card">
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Servidores y redes saturadas">
-                <h3>4. Denegación de Servicio (DDoS)</h3>
-                <p><strong>Definición:</strong> Saturar un servidor, servicio o red con un tráfico excesivo para agotar sus recursos y dejarlo inoperativo para los usuarios legítimos.</p>
-                <p><strong>Características:</strong> El ataque Distribuido (DDoS) utiliza una red de múltiples computadoras comprometidas (botnets) para realizar el ataque simultáneamente desde diferentes orígenes.</p>
-                <p><strong>Clasificación:</strong> Ataques volumétricos, de protocolo o de capa de aplicación.</p>
-                <p><strong>Prevención:</strong> Implementar firewalls, monitoreo de tráfico en tiempo real, balanceadores de carga y servicios de mitigación DDoS en la nube.</p>
-            </article>
+                <!-- DDoS -->
+                <article class="attack-card fade-in delay-1">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Servidores y redes saturadas">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>4. DDoS</h3>
+                        <p class="subtitle">Denegación de Servicio</p>
+                        <p><strong>Definición:</strong> Sobrecarga intencional de un servidor o red con tráfico ilegítimo masivo hasta colapsarlo.</p>
+                        <p><strong>Características:</strong> Emplea un ejército de dispositivos "zombies" (Botnet) distribuidos globalmente, lo que dificulta bloquear el ataque.</p>
+                        <p><strong>Clasificación:</strong> Ataques volumétricos, ataques de estado de protocolo (SYN flood) y capa de aplicación.</p>
+                        <div class="prevention">
+                            <h4>🛡️ Prevención</h4>
+                            <p>Servicios de mitigación DDoS en la nube (ej. Cloudflare), balanceadores de carga y Firewalls perimetrales.</p>
+                        </div>
+                    </div>
+                </article>
 
-            <!-- Man in the middle -->
-            <article class="attack-card">
-                <img src="https://images.unsplash.com/photo-1624969862644-791f3dc98927?auto=format&fit=crop&w=800&q=80" alt="Hacker interceptando datos">
-                <h3>5. Man-in-the-Middle (MitM)</h3>
-                <p><strong>Definición:</strong> El atacante se sitúa en medio de la comunicación entre dos partes y la intercepta, sin que ninguna de las partes se dé cuenta.</p>
-                <p><strong>Características:</strong> Permite al atacante escuchar, capturar contraseñas o incluso alterar la información transmitida en tiempo real.</p>
-                <p><strong>Clasificación:</strong> Intercepción de red, Spoofing (ARP, DNS, IP).</p>
-                <p><strong>Prevención:</strong> Utilizar cifrado en las comunicaciones (HTTPS, VPNs), evitar el uso de redes Wi-Fi públicas y abiertas para transacciones sensibles.</p>
-            </article>
+                <!-- Man in the middle -->
+                <article class="attack-card fade-in delay-2">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1624969862644-791f3dc98927?auto=format&fit=crop&w=800&q=80" alt="Hacker interceptando datos">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>5. Man-in-the-Middle</h3>
+                        <p class="subtitle">Intercepción de Tráfico</p>
+                        <p><strong>Definición:</strong> Intercepción silenciosa de la comunicación entre dos sistemas (ej. usuario y banco).</p>
+                        <p><strong>Características:</strong> El atacante puede leer, modificar o inyectar datos en tiempo real. Frecuente en redes Wi-Fi públicas inseguras.</p>
+                        <p><strong>Clasificación:</strong> ARP Spoofing, DNS Spoofing, Secuestro de sesión (Session Hijacking).</p>
+                        <div class="prevention">
+                            <h4>🛡️ Prevención</h4>
+                            <p>Cifrado de extremo a extremo, uso de VPNs y navegación exclusiva bajo protocolos seguros (HTTPS).</p>
+                        </div>
+                    </div>
+                </article>
 
-            <!-- SQL Injection -->
-            <article class="attack-card">
-                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80" alt="Código de programación">
-                <h3>6. Inyección SQL</h3>
-                <p><strong>Definición:</strong> Inserción de código malicioso en los campos de entrada de un sitio web para manipular las consultas que se hacen a su base de datos.</p>
-                <p><strong>Características:</strong> Aprovecha vulnerabilidades en formularios web para saltarse la autenticación, extraer datos confidenciales o corromper/borrar la base de datos.</p>
-                <p><strong>Clasificación:</strong> Ataques a aplicaciones web, inyección de código.</p>
-                <p><strong>Prevención:</strong> Sanitizar y validar las entradas de los usuarios, utilizar consultas parametrizadas o procedimientos almacenados en la programación del backend.</p>
-            </article>
+                <!-- SQL Injection -->
+                <article class="attack-card fade-in delay-3">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&q=80" alt="Código de programación">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>6. Inyección SQL</h3>
+                        <p class="subtitle">Ataque a Bases de Datos</p>
+                        <p><strong>Definición:</strong> Inserción de código malicioso en los inputs de una aplicación para manipular el motor de base de datos SQL.</p>
+                        <p><strong>Características:</strong> Permite realizar bypass de pantallas de login, extraer tablas enteras de usuarios o borrar información confidencial.</p>
+                        <p><strong>Clasificación:</strong> In-band SQLi, Inferential (Blind) SQLi, Out-of-band SQLi.</p>
+                        <div class="prevention">
+                            <h4>🛡️ Prevención</h4>
+                            <p>Uso estricto de Consultas Parametrizadas (Prepared Statements), ORMs y validación de entrada.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
-    <section class="references container">
-        <h2>Referencias Bibliográficas</h2>
-        <ul>
-            <li>Microsoft. (n.d.). <em>¿Qué son los ciberataques?</em> Recuperado de <a href="https://www.microsoft.com/es-mx/security/business/security-101/what-is-a-cyberattack" target="_blank" rel="noopener noreferrer">Microsoft Security</a>.</li>
-            <li>IBM. (n.d.). <em>¿Qué es el malware?</em> Recuperado de <a href="https://www.ibm.com/mx-es/think/topics/malware" target="_blank" rel="noopener noreferrer">IBM Cybersecurity</a>.</li>
-            <li>Fortinet. (n.d.). <em>Ciberamenazas y Seguridad en Redes</em>. Recuperado de <a href="https://www.fortinet.com/lat/resources/cyberglossary/cybersecurity" target="_blank" rel="noopener noreferrer">Fortinet Cybersecurity Guide</a>.</li>
-            <li>SentinelOne. (n.d.). <em>Phishing: Definición, prevención y ejemplos</em>. Recuperado de <a href="https://www.sentinelone.com/es/cybersecurity-101/threat-intelligence/how-to-prevent-phishing-attacks/" target="_blank" rel="noopener noreferrer">SentinelOne Resources</a>.</li>
-        </ul>
+    <section id="referencias" class="references fade-in">
+        <div class="container">
+            <h2 class="section-title">Fuentes y Referencias Bibliográficas</h2>
+            <div class="ref-list">
+                <a href="https://www.microsoft.com/es-mx/security/business/security-101/what-is-a-cyberattack" target="_blank" rel="noopener noreferrer" class="ref-item">
+                    <span class="ref-icon">🔗</span>
+                    <div class="ref-text">
+                        <strong>Microsoft</strong>
+                        <p>¿Qué son los ciberataques? - Microsoft Security.</p>
+                    </div>
+                </a>
+                <a href="https://www.ibm.com/mx-es/think/topics/malware" target="_blank" rel="noopener noreferrer" class="ref-item">
+                    <span class="ref-icon">🔗</span>
+                    <div class="ref-text">
+                        <strong>IBM</strong>
+                        <p>¿Qué es el malware? - IBM Cybersecurity.</p>
+                    </div>
+                </a>
+                <a href="https://www.fortinet.com/lat/resources/cyberglossary/cybersecurity" target="_blank" rel="noopener noreferrer" class="ref-item">
+                    <span class="ref-icon">🔗</span>
+                    <div class="ref-text">
+                        <strong>Fortinet</strong>
+                        <p>Ciberamenazas y Seguridad en Redes - Fortinet Cybersecurity Guide.</p>
+                    </div>
+                </a>
+                <a href="https://www.sentinelone.com/es/cybersecurity-101/threat-intelligence/how-to-prevent-phishing-attacks/" target="_blank" rel="noopener noreferrer" class="ref-item">
+                    <span class="ref-icon">🔗</span>
+                    <div class="ref-text">
+                        <strong>SentinelOne</strong>
+                        <p>Phishing: Definición, prevención y ejemplos.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -99,5 +191,7 @@
             <p>&copy; 2026 - Investigación sobre Seguridad en Redes y Prevención de Ataques.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
